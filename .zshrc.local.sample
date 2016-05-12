@@ -1,0 +1,11 @@
+#  local zshrc
+
+. ${ZDOTDIR}/lib/gpg-agent.zsh
+. ${ZDOTDIR}/lib/ssh-agent.zsh
+. ${ZDOTDIR}/lib/prompt-git.zsh
+
+RUBIES+=(/opt/rubies/*)
+source /usr/local/share/chruby/chruby.sh
+chruby 2.3.0
+
+#  vi:ft=zsh:

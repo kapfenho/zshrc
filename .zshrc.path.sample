@@ -1,0 +1,29 @@
+#  zshrc path settings, local config
+#  path must be set before autoload
+
+path=(
+  ~/bin
+  /usr/local/opt/libressl/bin
+  /usr/local/bin
+  /usr/local/sbin
+  /usr/bin
+  /usr/sbin
+  /bin
+  /sbin
+  /Library/TeX/texbin
+  /opt/X11/bin
+  /usr/local/MacGPG2/bin
+)
+
+fpath=(
+  /usr/local/share/zsh/site-functions
+  /usr/local/share/zsh-completions
+  /usr/local/share/zsh/functions
+)
+
+# cdpath=(
+#   .
+#   ~/dev
+# )
+
+# vi:ft=zsh:

@@ -1,0 +1,5 @@
+.history
+.zcomp*
+.zshrc.path
+*.local
+/local
