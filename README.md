@@ -5,7 +5,7 @@ For installation clone this repo as a new subdir in $HOME and link `.zshenv`
 into your home directory.
 
     $ cd
-    $ git clone ......
+    $ git clone ...... .zsh
     $ ln -sf ~/.zsh/.zshenv
     $ exec $SHELL -l
 
