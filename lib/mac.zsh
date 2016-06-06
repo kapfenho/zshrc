@@ -1,4 +1,4 @@
-# show hidden Library
+# environment stuff for mac os x      vi:ft=sh:
+#
 alias show-library='chflags nohidden ~/Library'
-
-# vim: ft=sh :
+alias bu='brew update && brew upgrade'

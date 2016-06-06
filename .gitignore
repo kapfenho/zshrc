@@ -1,5 +1,7 @@
 .history
 .zcomp*
 .zshrc.path
+path.zsh
+local.zsh
 *.local
 /local

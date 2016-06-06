@@ -6,16 +6,16 @@ into your home directory.
 
     $ cd
     $ git clone ...... .zsh
-    $ ln -sf ~/.zsh/.zshenv
+    $ ln -sf ~/.zsh/zshenv .zshenv
     $ exec $SHELL -l
 
 Customizations
 --------------
 
     $ cd ~/.zsh
-    $ cp .zshrc.local.sample .zshrc.local
-    $ cp .zshrc.path.sample .zshrc.path
-    $ vi .zshrc.local .zshrc.path
+    $ cp local.zsh.sample local.zsh
+    $ cp path.zsh.sample  path.zsh
+    $ vi local.zsh path.zsh
 
 
 

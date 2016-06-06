@@ -1,0 +1,46 @@
+#!/bin/sh
+
+set -o errexit
+
+caskdir="/opt/homebrew-cask/Caskroom"
+
+echo "executing  brew update"
+brew update
+echo "executing  brew upgrade -all"
+brew upgrade -all
+echo "executing  brew cleanup"
+brew cleanup
+
+echo "executing  cask upgrading steps..."
+
+brew cask ls | while read app 
+do
+    apath="${caskdir}/${app}"
+    vins=$(ls -t "${apath}/" | head -1)
+    vnew=$(brew cask info ${app} | head -1 | cut -d ' ' -f 2)
+
+    if [ "${vnew}" == "${vins}" ]
+    then
+        printf "%25s version ok, ${vnew} = ${vins}\n" "${app}"
+    else
+        printf "%25s new version ${vnew} > ${vins}, installing...\n" "${app}"
+        brew cask install "${app}"
+    fi
+
+    appnr=$(ls "${apath}/" | wc -l | tr -d ' ')
+    printf "%25s ${appnr} versions installed\n" "${app}"
+
+    ls -t "${apath}/" | sed 1d | while read ver
+    do
+        if [ -n "${ver}" ]
+        then
+            printf "%25s removing version ${apath}/${ver}\n" "${app}"
+            rm -Rf "${apath}/${ver}"
+        fi
+    done
+done
+
+echo "executing  brew cask cleanup"
+brew cask cleanup
+
+
