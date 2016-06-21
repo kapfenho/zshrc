@@ -23,10 +23,6 @@ export  CLICOLOR=1
 export      LESS="-RSi"
 export        RI="--format ansi --width 70"
 
-export    MAIL=~/Maildir
-export   EMAIL="horst.kapfenberger@agoracon.at"
-export IRCNICK=orthos
-export IRCNAME=horst
 export PGPPATH=$HOME/.gnupg
 
 [ -e $ZDOTDIR/path.zsh ] && . $ZDOTDIR/path.zsh

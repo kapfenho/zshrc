@@ -1,5 +1,10 @@
 #  local zshrc
 
+# export    MAIL=~/Maildir  or /var/mail/user
+# export   EMAIL="name@example.com"
+# export IRCNICK=nickname
+# export IRCNAME=name
+
 . ${ZDOTDIR}/lib/gpg-agent.zsh
 . ${ZDOTDIR}/lib/ssh-agent.zsh
 . ${ZDOTDIR}/lib/prompt-git.zsh
